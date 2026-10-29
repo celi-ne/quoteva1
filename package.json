@@ -1,0 +1,12 @@
+{
+  "name": "quoteva",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Quoteva Arabic interactive quote platform",
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node server.mjs",
+    "check": "node --check app.js && node --check server.mjs"
+  }
+}

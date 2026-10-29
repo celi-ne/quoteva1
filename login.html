@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07091e"><title>تسجيل الدخول — Quoteva</title>
+<link rel="icon" href="/assets/quoteva-mark.svg" type="image/svg+xml"><link rel="stylesheet" href="/styles.css">
+</head>
+<body class="auth-page">
+<header class="auth-topbar"><div class="auth-topbar-inner">
+<a class="brand" href="/index.html"><span class="brand-mark"><img src="/assets/quoteva-mark.svg" alt=""></span><span class="brand-copy"><strong>Quoteva</strong><small>Words · Knowledge · Security</small></span></a>
+<a class="auth-back" href="/index.html">العودة للرئيسية ←</a>
+</div></header>
+<main class="auth-layout">
+<section class="auth-art"><div class="auth-art-copy"><span class="mini-kicker">WORDS · KNOWLEDGE · SECURITY</span><h2>كل اقتباس، بداية<br><span style="color:var(--cyan)">لفكرة جديدة.</span></h2><p>مساحة تجمع المعرفة والتقنية والإلهام، بهوية Quoteva السيبرانية.</p></div></section>
+<section class="auth-form-wrap"><form class="auth-form" id="auth-form" novalidate>
+<div class="auth-symbol">♙</div><h1>أهلًا بعودتك</h1><p class="auth-subtitle">سجّلي الدخول للعودة إلى اقتباساتك المفضلة.</p>
+<div class="auth-field"><label for="email">البريد الإلكتروني</label><input id="email" name="email" type="email" placeholder="name@example.com" autocomplete="email" required></div>
+<div class="auth-field"><label for="password">كلمة المرور</label><input id="password" name="password" type="password" placeholder="••••••••" autocomplete="current-password" minlength="8" required></div>
+<div style="display:flex;justify-content:space-between;gap:12px;font-size:12px;color:var(--muted);margin:10px 0"><label><input type="checkbox" style="accent-color:var(--cyan)"> تذكرني</label><a class="auth-home-link" href="/signup.html">نسيت كلمة المرور؟</a></div>
+<button class="auth-submit" type="submit">تسجيل الدخول</button>
+<div class="auth-message" id="auth-message" role="status"></div>
+<p class="auth-switch">ليس لديك حساب؟ <a href="/signup.html">إنشاء حساب جديد</a></p>
+<p class="auth-note">هذه واجهة تجريبية للعرض فقط. يلزم ربطها بخدمة مصادقة وقاعدة بيانات لتفعيل الحسابات الحقيقية.</p>
+</form></section></main>
+<script>
+const form=document.getElementById('auth-form');const message=document.getElementById('auth-message');
+form.addEventListener('submit',(event)=>{event.preventDefault();const data=new FormData(form);const email=String(data.get('email')||'').trim();const password=String(data.get('password')||'');
+if(!email||!password){message.textContent='يرجى تعبئة البريد الإلكتروني وكلمة المرور.';message.classList.add('show');return;}
+if(password.length<8){message.textContent='كلمة المرور يجب أن تكون 8 أحرف على الأقل.';message.classList.add('show');return;}
+
+message.textContent='تم التحقق من الحقول. اربطي الصفحة بخدمة المصادقة لتفعيل الحسابات الحقيقية.';message.classList.add('show');});
+</script></body></html>

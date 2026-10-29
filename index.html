@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#07091e" />
+    <meta name="description" content="Quoteva — اقتباسات ملهمة لعقل أكثر أمانًا" />
+    <title>Quoteva — اقتباسات ملهمة وآمنة</title>
+    <link rel="icon" href="/assets/phu.avif" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="brand" href="#home" aria-label="Quoteva — الرئيسية">
+          <span class="brand-mark"><img src="/assets/phu.avif" alt="" /></span>
+          <span class="brand-copy">
+            <strong>Quoteva</strong>
+            <small>Words · Knowledge · Security</small>
+          </span>
+        </a>
+
+        <nav class="main-nav" aria-label="التنقل الرئيسي">
+          <a class="nav-link active" href="#home">الرئيسية</a>
+          <a class="nav-link" href="#quotes">الاقتباسات</a>
+          <a class="nav-link" href="#categories">الكتب</a>
+          <a class="nav-link" href="#features">المؤلفون</a>
+          <a class="nav-link" href="#about">من نحن</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="icon-button theme-toggle" type="button" aria-label="تبديل الوضع" title="تبديل الوضع">
+            <span class="theme-icon">☾</span>
+          </button>
+          <button class="icon-button" type="button" data-scroll-search aria-label="البحث" title="البحث">
+            <span class="search-glyph"></span>
+          </button>
+          <button class="primary-button add-quote-trigger" type="button">
+            <span>إضافة اقتباس</span><b>+</b>
+          </button>
+          <a class="auth-link" href="/login.html">تسجيل الدخول</a><a class="auth-link auth-link-signup" href="/signup.html">إنشاء حساب</a><button class="menu-toggle icon-button" type="button" aria-label="فتح القائمة" aria-expanded="false">
+            <span class="menu-bars"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-section" id="home">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="eyebrow-line"></span> مساحة للأفكار التي تحميك <span class="shield-dot">✦</span></div>
+            <h1>اقتباسات ملهمة<br /><span>لعقل أكثر أمانًا</span></h1>
+            <p class="hero-lead">هنا تلتقي الكلمات مع التقنية. اكتشف اقتباسات من كتب مميزة وأفكارًا ملهمة من عالم الأمن السيبراني لتبقى واعيًا، ملهمًا، وأكثر أمانًا في رحلتك الرقمية.</p>
+            <div class="hero-search" id="search-wrap">
+              <span class="search-glyph"></span>
+              <input id="search-input" type="search" placeholder="ابحث عن اقتباس، كتاب، أو مؤلف..." autocomplete="off" />
+              <kbd>⌘ K</kbd>
+            </div>
+            <div class="category-chips" id="categories" aria-label="تصنيف الاقتباسات"></div>
+            <div class="hero-proof">
+              <div class="avatars" aria-hidden="true"><span>ن</span><span>م</span><span>س</span><span>+</span></div>
+              <span>انضم إلى أكثر من <strong>12,480</strong> قارئًا يختارون كلماتهم بعناية</span>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="مشهد Quoteva">
+            <div class="hero-image-frame">
+              <div class="image-glow"></div>
+              <div class="hero-scene"></div>
+              <div class="scan-line"></div>
+              <div class="scene-tag scene-tag-top"><span class="tag-dot"></span> Read<br />&nbsp;&nbsp;Learn<br />&nbsp;&nbsp;Grow<br />&nbsp;&nbsp;Be Safer</div>
+              <div class="scene-tag scene-tag-bottom">Cyber Security<br /><span>Technology · Philosophy · Self Development</span></div>
+              <div class="floating-shield"><img src="/assets/quoteva-mark.svg" alt="" /></div>
+            </div>
+            <div class="hero-note"><span>«القراءة هي</span><strong>أقوى أداة في عالم<br />مليء بالتهديدات.»</strong><small>✦ Quoteva safe space</small></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="quotes-section" id="quotes">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="section-kicker">مختارات اليوم</span>
+              <h2>اقتباسات مميزة <span>★</span></h2>
+              <p id="results-label">اخترنا لك بعض الكلمات التي قد تغيّر طريقة تفكيرك...</p>
+            </div>
+            <div class="carousel-controls" aria-label="أدوات التمرير"><button type="button" class="circle-button" data-scroll-cards="prev">‹</button><button type="button" class="circle-button" data-scroll-cards="next">›</button></div>
+          </div>
+          <div class="quotes-grid" id="quotes-grid"></div>
+          <div class="empty-state" id="empty-state" hidden><span>⌁</span><h3>لم نعثر على اقتباس مطابق</h3><p>جرّب كلمة أخرى أو اختر تصنيفًا مختلفًا.</p><button class="text-button" type="button" data-clear-filters>عرض كل الاقتباسات ←</button></div>
+        </div>
+      </section>
+
+      <section class="features-section" id="features">
+        <div class="container features-grid">
+          <article class="feature-item"><span class="feature-icon cyan">⌁</span><div><h3>تقنية تصنع الفرق</h3><p>صمّمنا اقتباسات الويب لتمنحك تجربة سلسة وآمنة.</p></div></article>
+          <article class="feature-item"><span class="feature-icon purple">▤</span><div><h3>معرفة بلا حدود</h3><p>اكتشف كل يوم كلمات جديدة واقتباسات تلهمك.</p></div></article>
+          <article class="feature-item"><span class="feature-icon teal">♢</span><div><h3>أمانك أولويتنا</h3><p>نحمي بياناتك ونوفر بيئة آمنة للتصفح والمشاركة.</p></div></article>
+        </div>
+      </section>
+
+      <section class="about-section" id="about">
+        <div class="container about-card">
+          <div class="about-orbit"><span class="orbit-ring"></span><img src="/assets/quoteva-mark.svg" alt="" /></div>
+          <div><span class="section-kicker">عن Quoteva</span><h2>لأن كل كلمة ملهمة<br /><span>تستحق أن تُحفظ.</span></h2><p>Quoteva مساحة عربية هادئة تجمع بين جمال الأدب ووعي التقنية؛ لتقرأ، تتعلم، وتنمو بكلمات أكثر أمانًا.</p></div>
+          <a class="outline-button" href="#quotes">استكشف الاقتباسات <span>←</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <a class="brand" href="#top"><span class="brand-mark"><img src="/assets/quoteva-mark.svg" alt="" /></span><span class="brand-copy"><strong>Quoteva</strong><small>Words · Knowledge · Security</small></span></a>
+        <div class="social-links" aria-label="الحسابات الاجتماعية"><a href="#" aria-label="GitHub">◉</a><a href="#" aria-label="X">𝕏</a><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="YouTube">▶</a></div>
+        <p>لأن كل فكرة ملهمة... تستحق أن تُحمى <span>✦</span></p>
+      </div>
+      <div class="container footer-bottom"><span>© 2026 Quoteva. صُنع للكلمات التي تبقى.</span><span>خصوصية آمنة · تجربة بلا تشتيت</span></div>
+    </footer>
+
+    <div class="modal-backdrop" id="quote-modal" hidden>
+      <article class="quote-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" type="button" data-close-modal aria-label="إغلاق">×</button>
+        <span class="modal-symbol">“</span>
+        <span class="modal-category" id="modal-category">تطوير الذات</span>
+        <h2 id="modal-title">الاقتباس</h2>
+        <p class="modal-author" id="modal-author"></p>
+        <div class="modal-actions"><button class="outline-button" type="button" data-modal-copy>نسخ الاقتباس</button><button class="primary-button" type="button" data-modal-share>مشاركة <span>↗</span></button></div>
+      </article>
+    </div>
+
+    <div class="modal-backdrop" id="add-modal" hidden>
+      <article class="quote-modal add-modal" role="dialog" aria-modal="true" aria-labelledby="add-title">
+        <button class="modal-close" type="button" data-close-modal aria-label="إغلاق">×</button>
+        <span class="modal-category">مساحتك الخاصة</span>
+        <h2 id="add-title">أضف كلمة تستحق أن تُحفظ</h2>
+        <p class="modal-intro">شارك اقتباسًا ألهمك، واجعله يصل إلى شخص يحتاجه اليوم.</p>
+        <form id="add-form" novalidate>
+          <label>الاقتباس<textarea name="text" rows="4" placeholder="اكتب الاقتباس هنا..." required></textarea></label>
+          <div class="form-row"><label>القائل<input name="author" placeholder="اسم القائل" required /></label><label>الفئة<select name="category"><option>تطوير الذات</option><option>تحفيز</option><option>فلسفة</option><option>تقنية</option><option>أمن سيبراني</option><option>كتب</option></select></label></div>
+          <p class="form-error" id="form-error" role="alert"></p>
+          <button class="primary-button submit-button" type="submit">نشر الاقتباس <span>✦</span></button>
+        </form>
+      </article>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="/app.js" defer></script>
+  </body>
+</html>
